@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>Header}}
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main">
+         <img src="img/logo.jpg" alt="upcode" style="width: 9rem;">
+        <form method="" action="" id="f" >
+            <div class="inputbox">
+                <input type="text" required name="username" id="user" autocomplete="off">
+                <label for="">username</label>
+            </div>
+            <div class="inputbox">
+                <input type="password" required name="password" id="pass" autocomplete="off">
+                <label for="">password</label>
+            </div>
+            <div class="b">
+            <input type="submit" name="submit" value="login" id="submit">
+        </div>
+
+        </form>
+    </div>
+    {{>Script}}
+</body>
+
+</html>

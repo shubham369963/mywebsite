@@ -1,0 +1,41 @@
+.car3{
+    background-image: linear-gradient(to top, rgb(244, 247, 113) , rgb(233, 248, 19));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    height: 60vh;
+    width: 100%;
+}
+.car3 .image figure img{
+    margin-left: 10rem;
+    height: 50vh;
+    width: 30vw;
+}
+
+.car3 .read{
+    margin-right: 10rem;
+    height: 40%;
+    padding-left: 5rem;
+    margin-top: 4rem;
+    width: 40%;
+}
+
+@media (max-width : 768px){
+    .car3{
+        display: none;
+    }
+   }
+   @media(min-width: 769px) and (max-width : 1023px){
+       .car3 .image figure img{
+           height: 40vh;
+           width: 20vw;
+       }
+       
+   .car3 .read{
+       margin-right: 4rem;
+       height: 60%;
+       width: 50%;
+   } 
+   
+   }

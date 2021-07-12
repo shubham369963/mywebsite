@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{>Header}}
+  <link rel="stylesheet" href="css/car1.css">
+  <link rel="stylesheet" href="css/car2.css">
+  <link rel="stylesheet" href="css/car3.css">
+  <link rel="stylesheet" href="css/css1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  {{>Navbar}}
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        {{>car1}}
+      </div>
+      <div class="carousel-item">
+        {{>car2}}
+      </div>
+      <div class="carousel-item">
+        {{>car3}}
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <hr>
+  <h2 class="container text-center">Don't waste your valuable time and money</h2>
+  <p class="container text-center">only upcode has all the critical factors to deliver real results</p>
+  <br>
+  <div class="card-deck">
+    <div class="card ml-5 mr-5 "
+      style="border-top: 0.4rem solid green; border-radius: 0.5rem; box-shadow: 0.5rem 1rem 2rem black;">
+
+      <img class="card-img-top container" style="height: 13vh; width: 10vw;" src="img/clock.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title container text-center">Learn on your schedule time</h5>
+        <p class="card-text container text-center">Self-paced learning- whenever and wherever you want. Graduate while
+          learning part-time for 10 hrs/week.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 1 day ago</small>
+      </div>
+    </div>
+    <div class="card ml-5 mr-5"
+      style="border-top: 0.4rem solid blue; border-radius: 0.5rem; box-shadow: 0.5rem 1rem 2rem black;">
+      <img class="card-img-top container" style="height: 13vh; width: 9.5vw;" src="img/bag1.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title container text-center">Get real employable skills</h5>
+        <p class="card-text container text-center">Our quality curriculum is designed with top-tier industry partners,
+          not academics, so you learn the high-impact skills that top companies want.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 5 days ago</small>
+      </div>
+    </div>
+    <div class="card ml-5 mr-5"
+      style="border-top: 0.4rem solid red; border-radius: 0.5rem; box-shadow: 0.5rem 1rem 2rem black; ">
+      <img class="card-img-top container mt-2" style="height: 11vh; width: 12vw;" src="img/bulb1.jpg"
+        alt="Card image cap">
+      <div class="card-body mt-2">
+        <h5 class="card-title container text-center">Project-based, active learning</h5>
+        <p class="card-text container text-center">Learn by doing with real-world projects and other hands-on exercises
+          that lead to real skills mastery.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 7 hours ago</small>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="jumbotron" style="background-color: rgb(28, 44, 44); color: white;">
+    <h1 class="display-4 text-center"> <strong>Make the most of your online learning experience</strong></h1>
+    <p class="lead text-center" style="font: capitalise;">Our online learning resource center has tips,tricks and
+      inspiring stories to help your learn while staying home. </p>
+    <hr class="my-4">
+    <p class="lead container text-center">
+      <a class="btn btn-primary btn-lg" style="width: 15rem; font-weight: 600; " href="/explore" role="button">EXPLORE
+        RESOURCES</a>
+    </p>
+  </div>
+  <div class="jumbotron jumbotron-fluid" style="bottom: 0; left:0; right:0; top:100%;">
+    <div class="container">
+      <h1 class=" text-center ">The latest digital skills, within reach.</h1>
+      <p class="lead text-center">Discover the fastest, most effective way to gain job ready expertice for the careers
+        of the future.</p>
+      <hr>
+      <h5 class="text-center mr-5">&copy; 2020-2021 Upcode, Inc.</h5>
+      <br>
+      <div class="container row " style=" display:flex; justify-content:center; align-items:center; ">
+        <div style="padding: 1rem;"><a href="https://www.facebook.com/shubham.halade.127" class="fa fa-facebook" target="_blank"></a></div>
+        <div style="padding: 1rem;"><a href="https://www.google.com/" class="fa fa-google" target="_blank"></a></div>
+        <div style="padding: 1rem;"><a href="https://www.linkedin.com/in/halade-shubham-sunil-22bb55206/" class="fa fa-linkedin" target="_blank"></a></div>
+        <div style="padding: 1rem;"><a href="https://www.youtube.com/" class="fa fa-youtube" target="_blank"></a></div>
+        <div style="padding: 1rem;"><a href="https://www.instagram.com/shubham__396/" class="fa fa-instagram" target="_blank"></a></div>
+      </div>
+        <h6 class="text-center">Upcode is not an accredited univercity and we don't confer traditional degrees. Upcode platform is a helping factor for educational society.</h6>
+    </div>
+  </div>
+  {{>Script}}
+</body>
+
+</html>
