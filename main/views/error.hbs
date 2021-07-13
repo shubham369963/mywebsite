@@ -8,16 +8,20 @@
 
 <body class="bg-dark">
 {{>Navbar}}
-    <div class="card container " style="width: 37rem; margin-top: 2rem; border: none; ">
-            <img class="card-img-top container" src="img/error.png" alt="404 ERROR" style="height: 19rem; width: 35rem;">
-        <div class="card-body container" style="width: 37rem ; margin: -3rem 0 0 0;">
-            <h5 class="card-title text-center" style="font-size: 1.5rem; font-style:inherit;"><span
-                    style="font-size: 4rem;">404</span> That's an error</h5>
-            <p class="card-text text-center">The requested URL was not found on this server. <br>That's all we know. Go
+
+<div class="card mt-5 container" style=" border-radius: 0.5rem; width:inherit;  display:flex; justify-content:center; align-items: center; flex-direction:column;">
+ <img class="card-img-top pb-5" src="img/error.png" style="height: 60%; width: 60%; margin-bottom: -6rem;
+} " alt="error occured">
+  <div class="card-body">
+    <h5 class="card-title text-center"><big style="font-size: 3rem;">404</big> That's an error</h5>
+    <p class="card-text text-center">The requested URL was not found on this server. <br>That's all we know. Go
                 back to home the page</p>
-            <a href="/" class="btn btn-primary" style="float: right; margin: 0 5rem; width: 6rem ;font-style: bold;">Back</a>
-        </div>
-    </div>
+    <a href="/" class="btn btn-primary " style="display: flex; justify-content:center; margin-left: 80%;">Back</a>
+  </div>
+</div>
+
+
+
 
 {{>Script}}
 </body>
