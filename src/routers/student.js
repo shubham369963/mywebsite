@@ -20,7 +20,7 @@ router.post("/signup" , async(req , res) =>{
                 password: req.body.password,
                 cpassword: req.body.cpassword
             });
-            console.log("success" + user);
+            //console.log("success" + user);
             const registered = await user.save();
           //  console.log("token" + token);
             console.log("page" + registered);
