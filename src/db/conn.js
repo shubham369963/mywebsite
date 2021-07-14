@@ -1,5 +1,9 @@
 const mongoose = require("mongoose");
-mongoose.connect( process.env.MONGODB_KEY || "mongodb://localhost:27017/upcodedatabase",{
+
+const DB = process.env.MONGODB_KEY;
+
+
+mongoose.connect( DB || "mongodb://localhost:27017/upcodedatabase",{
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
