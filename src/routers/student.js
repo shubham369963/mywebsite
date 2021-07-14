@@ -24,7 +24,7 @@ router.post("/signup" , async(req , res) =>{
             const registered = await user.save();
           //  console.log("token" + token);
             console.log("page" + registered);
-            res.status(201).render("login");
+            res.status(201).render("login.hbs");
         }else{
             res.send("password are not matching");
         }
