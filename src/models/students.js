@@ -2,10 +2,15 @@ const mongoose = require("mongoose");
 const validator = require("validator");
 
 const StudentSchema = new mongoose.Schema({
-        name: {
+        fname: {
             type: String,
             required: true,
-            minlength: 5
+            
+        },
+        lname: {
+            type: String,
+            required: true,
+            
         },
         email: {
             type: String,
@@ -20,12 +25,39 @@ const StudentSchema = new mongoose.Schema({
         phone: {
             type: Number,
             required: true,
-            unique: true
+            
         },
-        address: {
+        day: {
+            type: Number,
+            min: 1,
+            max: 31,
+            required: true,
+            
+        },
+        month: {
+            type: Number,
+            min: 01,
+            max: 12,
+            required: true,
+            
+        },
+        year: {
+            type: Number,
+            required: true,
+            min: 1900,
+            max:2021
+        },
+        password: {
             type: String,
-            required: true
+            required: true,
+            
+        },
+        cpassword: {
+            type: String,
+            required: true,
+            
         }
+
     });
 
     const Student = new mongoose.model(

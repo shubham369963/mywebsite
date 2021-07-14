@@ -27,6 +27,46 @@ app.get("/login" , (req , res) => {
 app.get("/signup" , (req , res) => {
     res.render("signup");
 });
+
+app.post("/signup" , async(req , res) =>{
+    try{
+        const password = req.body.password;
+        const cpassword = req.body.cpassword;
+
+        if(password === cpassword){
+            const user = new Student({
+                firstname: req.body.fname,
+                lastname: req.body.lname,
+                email: req.body.email,
+                phone: req.body.phone,
+                birthday: req.body.day,
+                birthmonth: req.body.month,
+                birthyear: req.body.year,
+                password: req.body.password,
+                cpassword: req.body.cpassword
+            });
+            console.log("success" + user);
+            const registered = await user.save();
+            console.log("token" + token);
+            console.log("page" + registered);
+            res.status(201).render("login.hbs");
+        }else{
+            res.status(401).send("password are not matching");
+        }
+
+    }catch(err){
+        res.status(400).send(err);
+    }
+});
+
+
+
+
+
+
+
+
+
 app.get("/explore" , (req , res) => {
     res.render("explore");
 });
