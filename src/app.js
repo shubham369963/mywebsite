@@ -4,7 +4,6 @@ const app = express();
 const PORT = process.env.PORT || 8000 ;
 const hbs = require("hbs");
 
-
 require("../src/db/conn");
 const Student = require("../src/models/students");
 const staticPath = path.join(__dirname , "../public");
