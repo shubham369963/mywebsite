@@ -47,7 +47,7 @@ app.post("/signup" , async(req , res) =>{
             });
             console.log("success" + user);
             const registered = await user.save();
-            console.log("token" + token);
+          //  console.log("token" + token);
             console.log("page" + registered);
             res.status(201).render("login.hbs");
         }else{
@@ -58,14 +58,6 @@ app.post("/signup" , async(req , res) =>{
         res.status(400).send(err);
     }
 });
-
-
-
-
-
-
-
-
 
 app.get("/explore" , (req , res) => {
     res.render("explore");
