@@ -20,7 +20,7 @@ router.post("/signup" , async(req , res) =>{
                 password: req.body.password,
                 cpassword: req.body.cpassword
             });
-            //console.log("success" + user);
+            console.log("success" + user);
             const registered = await user.save();
           //  console.log("token" + token);
             console.log("page" + registered);
@@ -33,5 +33,26 @@ router.post("/signup" , async(req , res) =>{
         res.status(500).send(err);
     }
 });
+
+router.post("/login" , async(req , res) =>{
+    try{
+const email = req.body.email;
+const password = req.body.password;
+const useremail = await Student.findOne({email : email});
+
+if(useremail.cpassword === password ){
+    res.status(201).render("explore.hbs");
+}else{
+    res.status(400).send("invalid login details please check ");
+}
+    }catch(err){
+res.status(500).send("invalid login details");
+    }
+});
+
+
+
+
+
 
 module.exports = router;
