@@ -3,6 +3,7 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 8000 ;
 const hbs = require("hbs");
+const bcrypt = require("bcryptjs");
 
 require("../src/db/conn");
 const Student = require("../src/models/students");
@@ -40,6 +41,17 @@ app.get("/*" , (req , res) => {
     res.render("error");
 });
 
+
+/*const securePassword = async (password) =>{
+   const passwordHash = await bcrypt.hash(password , 10);
+   console.log(passwordHash);
+   const passwordmatch = await bcrypt.compare(password , passwordHash);
+   console.log(passwordmatch);
+  
+}*/
+
+
 app.listen( PORT , () => {
     console.log(`listening on port ${PORT}`);
 });
+

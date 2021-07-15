@@ -1,7 +1,7 @@
 const express = require("express");
 const router = new express.Router();
 const Student = require("../models/students");
-
+const bcrypt = require("bcryptjs");
 
 router.post("/signup" , async(req , res) =>{
     try{
@@ -40,10 +40,12 @@ const email = req.body.email;
 const password = req.body.password;
 const useremail = await Student.findOne({email : email});
 
-if(useremail.cpassword === password ){
+const isMatch = await bcrypt.compare( password , useremail.password);
+
+if(isMatch){
     res.status(201).render("explore.hbs");
 }else{
-    res.status(400).send("invalid login details please check ");
+    res.status(400).render("login.hbs");
 }
     }catch(err){
 res.status(500).send("invalid login details");

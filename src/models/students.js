@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
+const bcrypt = require("bcryptjs");
 
 const StudentSchema = new mongoose.Schema({
         fname: {
@@ -15,7 +16,6 @@ const StudentSchema = new mongoose.Schema({
         email: {
             type: String,
             required: true,
-            unique: [true, "email is envaild"],
             validate(value){
                 if(!validator.isEmail(value)){
                     throw new Error("email is not correct");
@@ -59,6 +59,17 @@ const StudentSchema = new mongoose.Schema({
         }
 
     });
+
+    StudentSchema.pre("save" , async function(next){
+        if(this.isModified("password")){
+            console.log(`current password is ${this.password}`)
+            this.password = await bcrypt.hash(this.password , 10);
+            this.cpassword = await bcrypt.hash(this.password , 10);
+
+        }
+        next();
+    });
+
 
     const Student = new mongoose.model(
         "Student", StudentSchema
