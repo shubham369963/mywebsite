@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 const StudentSchema = new mongoose.Schema({
         fname: {
@@ -56,9 +57,34 @@ const StudentSchema = new mongoose.Schema({
             type: String,
             required: true,
             
-        }
+        },
+        tokens:[{
+            token: {
+                type: String,
+                required: true,
+            }
+
+        }]
 
     });
+
+
+    StudentSchema.methods.generateAuthToken = async function(){
+        try{
+            console.log(this._id);
+            const token = jwt.sign({_id: this._id.toString()} , "h27ris76odn261hdbaczx6549uthns09" );
+            this.tokens = this.tokens.concat({token: token});
+            await this.save();
+            return token;
+
+
+        }catch(err){
+            res.send(err);
+            console.log(err);
+        }
+    };
+
+
 
     StudentSchema.pre("save" , async function(next){
         if(this.isModified("password")){
@@ -69,6 +95,7 @@ const StudentSchema = new mongoose.Schema({
         }
         next();
     });
+
 
 
     const Student = new mongoose.model(

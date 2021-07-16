@@ -1,7 +1,9 @@
+require('dotenv').config();
 const express = require("express");
 const router = new express.Router();
 const Student = require("../models/students");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 router.post("/signup" , async(req , res) =>{
     try{
@@ -21,13 +23,21 @@ router.post("/signup" , async(req , res) =>{
                 cpassword: req.body.cpassword
             });
             console.log("success" + user);
+
+
+            const token = await user.generateAuthToken();
+            console.log("token" + token);
+
             const registered = await user.save();
-          //  console.log("token" + token);
-            console.log("page" + registered);
+            console.log("the part page" + registered);
+
             res.status(201).render("login.hbs");
+            
         }else{
             res.send("password are not matching");
         }
+        
+
 
     }catch(err){
         res.status(500).send(err);
@@ -40,7 +50,11 @@ const email = req.body.email;
 const password = req.body.password;
 const useremail = await Student.findOne({email : email});
 
+
 const isMatch = await bcrypt.compare( password , useremail.password);
+const token = await useremail.generateAuthToken();
+console.log(" the token is " + token);
+
 
 if(isMatch){
     res.status(201).render("explore.hbs");

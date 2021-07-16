@@ -4,6 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 8000 ;
 const hbs = require("hbs");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 require("../src/db/conn");
 const Student = require("../src/models/students");
@@ -40,6 +41,18 @@ app.get("/explore" , (req , res) => {
 app.get("/*" , (req , res) => {
     res.render("error");
 });
+
+
+
+
+const createToken = async() =>{
+    const token = await jwt.sign({_id : this._id } , "h27ris76odn261hdbaczx6549uthns09" , {expiresIn: "10 seconds"});
+    console.log(token);
+
+    const userVer = await jwt.verify(token , "h27ris76odn261hdbaczx6549uthns09" );
+    console.log(userVer);
+}
+createToken();
 
 
 /*const securePassword = async (password) =>{
