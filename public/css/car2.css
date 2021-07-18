@@ -26,6 +26,10 @@
     .car2{
         display: none;
     }
+    .carousel-indicators{
+        display: none;
+    }
+
    }
    @media(min-width: 769px) and (max-width : 1023px){
        .car2 .image figure img{
@@ -38,5 +42,8 @@
        height: 60%;
        width: 50%;
    } 
+   .carousel-indicators{
+    display: none;
+}
    
    }
