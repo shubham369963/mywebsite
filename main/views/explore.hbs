@@ -1,13 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   {{>Header}}
+   <link rel="stylesheet" href="css/explore.css">
+     <link rel="stylesheet" href="css/css1.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
-    <p>hfdhh</p>
+    {{>Navbar}}
+<div id="London" class="tabcontent">
+  <h1>Introduction</h1>
+  <p>Upcode platform provides many more courses contains coding and programming languages.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h1>web Developement</h1>
+  <p>web developement programming contains front-end, back-end and database part. learn more.</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h1>Programming Languages</h1>
+  <p>programming language contains top programming language courses. learn more.</p>
+</div>
+
+<div id="Oslo" class="tabcontent">
+  <h1>Data Structures</h1>
+  <p>coming soon.</p>
+</div>
+
+<a class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen" href="#1">Into</a>
+<a class="tablink" onclick="openCity('Paris', this, 'green')"  href="#2">Web</a>
+<a class="tablink" onclick="openCity('Tokyo', this, 'blue')"  href="#3">Pl</a>
+<a class="tablink" onclick="openCity('Oslo', this, 'orange')"  href="#4">Ds</a>
+<br>
+<br>
+<div class="jumbotron" id="1">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>
+<div class="jumbotron" id="2">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>
+<div class="jumbotron" id="3">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>
+<div class="jumbotron" id="4">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>
     <a href="/secret">click me</a>
+     {{>Footer}}
+    {{>Script}}
+    <script src="js/explore.js"></script>
 </body>
 </html>

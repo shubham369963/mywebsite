@@ -1,0 +1,38 @@
+/* Style the tab buttons */
+.tablink {
+    background-color: rgb(161, 161, 161);
+    color: rgb(15, 15, 15);
+    float: left;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tablink:hover {
+    background-color: #777;
+    text-decoration: none;
+    color: black;
+  }
+  
+  /* Set default styles for tab content */
+  .tabcontent {
+    color: rgb(3, 3, 3);
+    display: none;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  /* Style each tab content individually */
+  #London {background-color:rgb(250, 145, 145);}
+  #Paris {background-color:rgb(130, 231, 130);}
+  #Tokyo {background-color:rgb(168, 146, 247);}
+  #Oslo {background-color:rgb(241, 243, 107);}
+  
+
+    
