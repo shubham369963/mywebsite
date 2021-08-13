@@ -65,6 +65,7 @@ app.get("/signup" , (req , res) => {
 app.get("/explore" , (req , res) => {
     res.render("explore");
 });
+
 app.get("/*" , (req , res) => {
     res.render("error");
 });

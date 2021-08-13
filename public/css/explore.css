@@ -10,7 +10,8 @@
     cursor: pointer;
     padding: 14px 16px;
     font-size: 17px;
-    width: 25%;
+    width: 50%;
+    height: 78px;
   }
   
   /* Change background color of buttons on hover */
@@ -29,8 +30,8 @@
   }
   
   /* Style each tab content individually */
-  #London {background-color:rgb(250, 145, 145);}
-  #Paris {background-color:rgb(130, 231, 130);}
+  #London {background-color:rgb(250, 183, 145);}
+  #Paris {background-color:rgb(130, 231, 144);}
   #Tokyo {background-color:rgb(168, 146, 247);}
   #Oslo {background-color:rgb(241, 243, 107);}
   
