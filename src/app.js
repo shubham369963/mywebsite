@@ -37,14 +37,6 @@ app.get("/secret", auth, (req, res) => {
     res.render("secret");
 });
 
-
-app.get("/code", auth, (req, res) => {
-    //console.log(` this is the cookie ${req.cookies.jwt}`);
-    res.render("code");
-
-});
-
-
 app.get("/logout" , auth , async(req , res) =>{
 try{
     console.log(req.user);
@@ -82,6 +74,13 @@ app.get("/signup", (req, res) => {
 
 app.get("/explore", (req, res) => {
     res.render("explore");
+});
+
+
+app.get("/code", auth, (req, res) => {
+    //console.log(` this is the cookie ${req.cookies.jwt}`);
+    res.render("code");
+
 });
 
 app.get("/*", (req, res) => {
