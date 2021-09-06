@@ -37,11 +37,11 @@ app.get("/secret", auth, (req, res) => {
     res.render("secret");
 });
 
-<<<<<<< HEAD
 app.get("/code", auth, (req, res) => {
     //console.log(` this is the cookie ${req.cookies.jwt}`);
     res.render("code");
-=======
+
+    
 app.get("/code" ,auth , (req ,res) =>{
     //console.log(` this is the cookie ${req.cookies.jwt}`);
     res.render("code");
