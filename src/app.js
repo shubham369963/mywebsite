@@ -37,11 +37,10 @@ app.get("/secret", auth, (req, res) => {
     res.render("secret");
 });
 
-<<<<<<< HEAD
+
 app.get("/code", auth, (req, res) => {
     //console.log(` this is the cookie ${req.cookies.jwt}`);
     res.render("code");
-=======
 app.get("/code" ,auth , (req ,res) =>{
     //console.log(` this is the cookie ${req.cookies.jwt}`);
     res.render("code");
@@ -54,7 +53,7 @@ try{
 
 req.user.tokens = req.user.tokens.filter((currentelement) =>{
 return currentelement.token !== req.token;
->>>>>>> bb8e6339cf49abb86f3aadb30492fc1d49c37b8d
+
 });
 
 
@@ -109,11 +108,8 @@ createToken();
    console.log(passwordHash);
    const passwordmatch = await bcrypt.compare(password , passwordHash);
    console.log(passwordmatch);
-  
 }*/
-
 
 app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`);
 });
-
