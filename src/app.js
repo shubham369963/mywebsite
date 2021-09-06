@@ -77,12 +77,6 @@ app.get("/explore", (req, res) => {
 });
 
 
-app.get("/code", auth, (req, res) => {
-    //console.log(` this is the cookie ${req.cookies.jwt}`);
-    res.render("code");
-
-});
-
 app.get("/*", (req, res) => {
     res.render("error");
 });
