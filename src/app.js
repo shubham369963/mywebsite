@@ -44,6 +44,9 @@ try{
 req.user.tokens = req.user.tokens.filter((currentelement) =>{
 return currentelement.token !== req.token;
 
+});}catch (err) {
+        res.status(500).send(err);
+    }
 });
 
 
