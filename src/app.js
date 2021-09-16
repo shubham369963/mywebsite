@@ -79,6 +79,9 @@ app.get("/explore", (req, res) => {
     res.render("explore");
 });
 
+app.get("/code", (req, res) => {
+    res.render("code");
+});
 
 app.get("/*", (req, res) => {
     res.render("error");
