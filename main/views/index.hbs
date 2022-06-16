@@ -1,108 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  {{>Header}}
-  <link rel="stylesheet" href="css/car1.css">
-  <link rel="stylesheet" href="css/car2.css">
- 
-  <link rel="stylesheet" href="css/car3.css">
-  <link rel="stylesheet" href="css/css1.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+  <head>
+    {{>Header}}
+    <link rel="stylesheet" href="css/car1.css">
+    <link rel="stylesheet" href="css/car2.css">
+    <link rel="stylesheet" href="css/course.css">
+    <link rel="stylesheet" href="css/car3.css">
+    <link rel="stylesheet" href="css/css1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+  </head>
 
-<body>
-  {{>Navbar}}
- <div class="alert alert-success" role="alert">
-<marquee behavior="" direction="left">You can download pdfs and watch our web development videos also. our upcode platform is on <a class="badge badge-secondary" href="https://www.youtube.com/channel/UCkVpA22QZfdzU9RBVacrKpg">youtube</a> so you can also watch our coding videos on youtube so lets start your coding journy with upcode platform</marquee> 
+  <body>
+    {{>Navbar}}
+    <div class="alert alert-success" role="alert">
+      <marquee behavior="" direction="left">You can download pdfs and watch our web development videos also. our upcode
+        platform is on <a class="badge badge-secondary"
+          href="https://www.youtube.com/channel/UCkVpA22QZfdzU9RBVacrKpg">youtube</a> so you can also watch our coding
+        videos on youtube so lets start your coding journy with upcode platform</marquee>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          {{>car1}}
+        </div>
+        <div class="carousel-item">
+          {{>car2}}
+        </div>
+        <div class="carousel-item">
+          {{>car3}}
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <hr>
+    <div class="course">
+      <div class="heading">
+        <h1><b>___enroll your courses___</b></h1>
+        <p>updated courses <span style="color: green;" class="material-symbols-outlined">
+            check_circle
+          </span></p>
+      </div>
+      <div class="headss">
+        <div class="cardss">
+<div class="ph">
+<img class="ppp" src="img/course.jpg" alt="">
 </div>
+<div class="other">
+<h3>html course</h3>
 
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        {{>car1}}
-      </div>
-      <div class="carousel-item">
-        {{>car2}}
-      </div>
-      <div class="carousel-item">
-        {{>car3}}
+</div>
+        </div>
+        <div class="cardss">
+
+        </div>
+        <div class="cardss">
+
+        </div>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-  <hr>
-  <h2 class="container text-center">Don't waste your valuable time and money</h2>
-  <p class="container text-center">only upcode has all the critical factors to deliver real results</p>
-  <br>
-  <div class="card-deck">
-    <div class="card ml-5 mr-5 "
-      style="border-top: 0.5rem solid green; border-radius: 0.5rem; box-shadow: 0.5rem 1rem 2rem black;">
+    <hr>
+    <h2 class="container text-center">Don't waste your valuable time and money</h2>
+    <p class="container text-center">only upcode has all the critical factors to deliver real results</p>
+    <br>
+    <div class="card-deck">
+      <div class="card ml-5 mr-5 "
+        style="border-top: 0.5rem solid green; border-radius: 0.5rem; box-shadow: 0.5rem 1rem 2rem black;">
 
-      <img class="card-img-top container" style="height: 9rem;width: 11rem;" src="img/clock.png" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title container text-center">Learn on your schedule time</h5>
-        <p class="card-text container text-center">Self-paced learning- whenever and wherever you want. Graduate while
-          learning part-time for 10 hrs/week.</p>
+        <img class="card-img-top container" style="height: 9rem;width: 11rem;" src="img/clock.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title container text-center">Learn on your schedule time</h5>
+          <p class="card-text container text-center">Self-paced learning- whenever and wherever you want. Graduate while
+            learning part-time for 10 hrs/week.</p>
+        </div>
+        <div class="card-footer">
+
+        </div>
       </div>
-      <div class="card-footer">
+      <div class="card ml-5 mr-5"
+        style="border-top: 0.5rem solid blue; border-radius: 0.5rem; box-shadow: 0.5rem 1rem 2rem black;">
+        <img class="card-img-top container" style="height: 9rem;width: 11rem;" src="img/bag1.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title container text-center">Get real employable skills</h5>
+          <p class="card-text container text-center">Our quality curriculum is designed with top-tier industry partners,
+            not academics, so you learn the high-impact skills that top companies want.</p>
+        </div>
+        <div class="card-footer">
 
+        </div>
+      </div>
+      <div class="card ml-5 mr-5"
+        style="border-top: 0.5rem solid red; border-radius: 0.5rem; box-shadow: 0.5rem 1rem 2rem black; ">
+        <img class="card-img-top container" style="height: 7.5rem;width: 9rem; margin-top: 1rem;" src="img/bulb1.jpg"
+          alt="Card image cap">
+        <div class="card-body mt-2">
+          <h5 class="card-title container text-center">Project-based, active learning</h5>
+          <p class="card-text container text-center">Learn by doing with real-world projects and other hands-on
+            exercises
+            that lead to real skills mastery.</p>
+        </div>
+        <div class="card-footer">
+
+        </div>
       </div>
     </div>
-    <div class="card ml-5 mr-5"
-      style="border-top: 0.5rem solid blue; border-radius: 0.5rem; box-shadow: 0.5rem 1rem 2rem black;">
-      <img class="card-img-top container" style="height: 9rem;width: 11rem;" src="img/bag1.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title container text-center">Get real employable skills</h5>
-        <p class="card-text container text-center">Our quality curriculum is designed with top-tier industry partners,
-          not academics, so you learn the high-impact skills that top companies want.</p>
-      </div>
-      <div class="card-footer">
-
-      </div>
+    <br>
+    <br>
+    <br>
+    <div class="jumbotron" style="background-color: rgb(28, 44, 44); color: white;">
+      <h1 class="display-4 text-center"> <strong>Make the most of your online learning experience</strong></h1>
+      <p class="lead text-center" style="font: capitalise;">Our online learning resource center has tips,tricks and
+        inspiring stories to help your learn while staying home. </p>
+      <hr class="my-4">
+      <p class="lead container text-center">
+        <a class="btn btn-primary btn-lg" style="width: 15rem; font-weight: 600; " href="/explore" role="button">EXPLORE
+          RESOURCES</a>
+      </p>
     </div>
-    <div class="card ml-5 mr-5"
-      style="border-top: 0.5rem solid red; border-radius: 0.5rem; box-shadow: 0.5rem 1rem 2rem black; ">
-      <img class="card-img-top container" style="height: 7.5rem;width: 9rem; margin-top: 1rem;" src="img/bulb1.jpg"
-        alt="Card image cap">
-      <div class="card-body mt-2">
-        <h5 class="card-title container text-center">Project-based, active learning</h5>
-        <p class="card-text container text-center">Learn by doing with real-world projects and other hands-on exercises
-          that lead to real skills mastery.</p>
-      </div>
-      <div class="card-footer">
+    {{>Footer}}
+    {{>Script}}
 
-      </div>
-    </div>
-  </div>
-  <br>
-  <br>
-  <br>
-  <div class="jumbotron" style="background-color: rgb(28, 44, 44); color: white;">
-    <h1 class="display-4 text-center"> <strong>Make the most of your online learning experience</strong></h1>
-    <p class="lead text-center" style="font: capitalise;">Our online learning resource center has tips,tricks and
-      inspiring stories to help your learn while staying home. </p>
-    <hr class="my-4">
-    <p class="lead container text-center">
-      <a class="btn btn-primary btn-lg" style="width: 15rem; font-weight: 600; " href="/explore" role="button">EXPLORE
-        RESOURCES</a>
-    </p>
-  </div>
- {{>Footer}}
-  {{>Script}}
-  
-</body>
+  </body>
 
 </html>

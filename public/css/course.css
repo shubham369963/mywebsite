@@ -1,0 +1,60 @@
+.course{
+    height: 500px;
+    background-color: rgb(188, 185, 185);
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 120px;
+
+}
+
+.headss{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 390px;
+}
+
+.cardss{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    background-color: rgb(255, 255, 255);
+    width: 25%;
+    border-radius: 5%;
+}
+
+.ph{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+    width: 95%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+.ppp{
+    height: 98%;
+    width: 98%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+.other{
+    height: 50%;
+    background-color: blueviolet;
+    width: 95%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+
+}
